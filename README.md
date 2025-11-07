@@ -5,6 +5,7 @@ MediCare kombinuje Nest.js backend, React (Vite) frontend a sdílené TypeScript
 ## Rychlý start
 
 ```bash
+npm install
 npm run setup
 npm run dev:all
 ```
