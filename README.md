@@ -6,10 +6,12 @@ MediCare kombinuje Nest.js backend, React (Vite) frontend a sdílené TypeScript
 
 ```bash
 npm install
+npm run build
 npm run setup
 npm run dev:all
 ```
-
+- `npm install` stáhne a nainstaluje všechny závislosti (balíčky) projektu uvedené v souboru package.json do složky node_modules.
+- `npm run build` spustí skript, který projekt zkompiluje a optimalizuje pro produkční nasazení.
 - `npm run setup` vytvoří `.env` (pokud chybí) a nainstaluje všechny závislosti.
 - `npm run dev:all` spustí MongoDB (lokálně přes `mongod`), backend i frontend v jednom terminálu.
 - Pokud chceš pouze backend s databází, použij `npm run dev:backend+db`.
