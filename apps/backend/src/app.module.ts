@@ -1,5 +1,6 @@
 import { Module, type DynamicModule } from '@nestjs/common';
 import { HealthModule } from './health/health.module';
+import {ReservationsModule} from './reservations/reservations.module';
 import { LoggerModule } from 'nestjs-pino';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
@@ -31,7 +32,8 @@ function resolveDatabaseModule(): DynamicModule[] {
       }
     }),
     ...resolveDatabaseModule(),
-    HealthModule
+    HealthModule,
+    ReservationsModule
   ],
   controllers: [AppController],
   providers: [AppLoggerService]
