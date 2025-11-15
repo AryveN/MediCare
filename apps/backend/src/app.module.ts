@@ -4,6 +4,8 @@ import { LoggerModule } from 'nestjs-pino';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppLoggerService } from './common/logger.service';
+import { TimeslotsModule } from './timeslots/timeslots.module';
+import { DoctorsModule } from './doctors/doctors.module';
 
 function resolveDatabaseModule(): DynamicModule[] {
   if (process.env.NODE_ENV === 'test') {
@@ -31,9 +33,11 @@ function resolveDatabaseModule(): DynamicModule[] {
       }
     }),
     ...resolveDatabaseModule(),
+    TimeslotsModule,
+    DoctorsModule,
     HealthModule
   ],
   controllers: [AppController],
   providers: [AppLoggerService]
 })
-export class AppModule {}
+export class AppModule { }
