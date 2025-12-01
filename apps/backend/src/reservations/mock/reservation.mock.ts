@@ -6,7 +6,7 @@ export interface ReservationMock {
   procedureId: string;
   slotStart: string;
   slotEnd: string;
-  status: 'pending' | 'confirmed' | 'cancelled';
+  status: 'pending' | 'confirmed' | 'cancelled' | 'completed';
   createdAt: string;
   updatedAt: string;
   note?: string;
