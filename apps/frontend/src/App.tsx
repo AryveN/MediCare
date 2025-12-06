@@ -39,6 +39,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import ManReservations from "./components/ManReservation";
+import Calendar from "./modul/calendar";
+import AppointmentForm from "./modul/rezervovat";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +53,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/moje-rezervace" element={<ManReservations />} />
+          <Route path="/rezervovat" element={<AppointmentForm />} />
+          <Route path="/calendar" element={<Calendar />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
